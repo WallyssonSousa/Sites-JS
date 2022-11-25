@@ -1,0 +1,71 @@
+-- document.getElementById('') = Busca elementos em tags criadas em id; //Exemplos:{ document.getElementById('producao');} 
+-- Podemos fazer a troca de valores por meio do getElementById, da simples forma:{ document.getElementById('producao').value="Aqui escreve a troca"}
+
+-- document.getElementByClassName('') = E a mesma coisa que o ID, unica coisa que muda e que normalmente usamos mais class do que id; 
+
+-- o document.querySelector(' . & # ') = E um seletor onde busca tags; 
+
+-- O DOM (Document Object Model) e o JavaScript, juntos, possuem grande poder de modificar dinamicamente a estrutura de um documento HTML. Sendo possível, por exemplo:
+
+Adicionar/modificar/remover tags, textos, imagens e qualquer elemento no HTML.
+Alterar estilos CSS da página.
+Criar novos eventos HTML.
+Vamos conferir formas de realizar os itens listados no tópico acima.
+
+Métodos para selecionar elementos no HTML
+
+document.getElementByID(id) - Selecionar um elemento pelo ID.
+document.getElementsByTagName(name) - Selecionar um elemento pelo nome.
+document.getElementsByClassName(name) - Selecionar um elemento pelo nome da classe.
+Propriedades e métodos para alterar elementos no HTML
+
+element.innerHTML - Esta propriedade obtém ou altera qualquer elemento no HTML, inclusive tags.
+element.innerText - Esta propriedade permite inserir textos no HTML.
+element.attribute - Esta propriedade altera o valor de um elemento HTML
+element.setAttribute(atributo, valor) - Este método altera o valor de um atributo de um elemento HTML.
+Adicionando e excluindo elementos
+
+document.write() - Escreve no fluxo de saída do HTML.
+document.appendChild() - Adiciona um elemento HTML.
+document.removeChild() - Remove um elemento HTML.
+document.replaceChild() - Substitui um elemento HTML.
+document.createElement() - Cria um elemento HTML.
+
+-- .addEventListener ele serve para adicionar um evento, sendo usado como exemplo: " document.querySelector("#robotron").addEventListener("Click"), ele deve sempre ser usado a um elemento. 
+
+-- Para buscar esse elemento, usar o document.querySelector; 
+
+-- Exemplo final do codigo:{
+    
+    const robotron = document.querySelector("#robotron")
+
+    robotron.addEventListener("click",dizOi)
+
+    function dizOi(){
+        console.log("oi")
+    }
+}
+
+-- Se eu quiser que o comando seja feito apenas quando eu desejo, basta criar uma funçao anonima, para fazer isso, siga o exemplo:{  
+
+robotron.addEventListener("click", function() {
+    console.log("Cliquei no robo")
+})
+
+} 
+
+-- No lugar de colocar o function (), podemos usar tambem o () => ;
+
+-- Na utilizaçao de parametros, utilizamos da seguinte maneira, passamos o parametro na funçao, da seguinte forma, function dizOi(nome){console.log(nome(colocando o parametro no console.log))}, e chamando embaixo, colocamos o dizOi("Wallysson") declarando o que queremos que seja dito no parametro; 
+
+-- querySelectorAll para quando for usar mais de um identificador
+
+-- forEach um jeito de manipular Array, exemplo abaixo:{
+    controle.forEach( (elemento) => {
+    elemento.addEventListener("click", () =>{
+        console.log("funcionou")
+    })
+})
+}
+
+-- Vercel.com
